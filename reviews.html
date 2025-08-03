@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы клиентов | KRASIVO | Роскошная организация событий премиум-класса</title>
+    <meta name="description" content="Отзывы наших клиентов о роскошных мероприятиях премиум-класса от KRASIVO. Читайте истории успеха и впечатления от незабываемых событий.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="luxury-design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ELITE LUXURY PRELOADER - уровня Cartier/Chanel */
+        #luxuryPreloader {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%) !important;
+            z-index: 999999 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            opacity: 1 !important;
+            transition: opacity 1.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+        }
+        
+        #luxuryPreloader.luxury-fade-out {
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+        
+        .luxury-content {
+            text-align: center !important;
+            position: relative !important;
+        }
+        
+        .luxury-logo {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 4.5rem !important;
+            font-weight: 300 !important;
+            color: #d4af37 !important;
+            letter-spacing: 0.15em !important;
+            margin-bottom: 30px !important;
+            background: linear-gradient(45deg, #d4af37, #ffd700, #d4af37, #b8860b) !important;
+            background-size: 400% 400% !important;
+            background-clip: text !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5) !important;
+            animation: luxuryShimmer 3s ease-in-out infinite, luxuryFloat 4s ease-in-out infinite !important;
+        }
+        
+        .luxury-line {
+            width: 300px !important;
+            height: 1px !important;
+            background: linear-gradient(90deg, transparent 20%, #d4af37 50%, #d4af37 70%, transparent) !important;
+            margin: 0 0 25px 0 !important;
+            position: absolute !important;
+            opacity: 0.8 !important;
+            display: block !important;
+            left: 50% !important;
+            transform: translateX(0%) !important;
+        }
+        
+        .luxury-line::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: -100% !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: linear-gradient(90deg, transparent, #ffd700, transparent) !important;
+            animation: luxurySlide 2s ease-in-out infinite !important;
+        }
+        
+        .luxury-text {
+            color: #d4af37 !important;
+            font-family: 'Cormorant Garamond', serif !important;
+            font-style: italic !important;
+            font-size: 1rem !important;
+            font-weight: 300 !important;
+            letter-spacing: 0.2em !important;
+            opacity: 0.9 !important;
+            text-transform: lowercase !important;
+            animation: luxuryPulse 2.5s ease-in-out infinite !important;
+        }
+        
+        @keyframes luxuryShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes luxuryFloat {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-8px) scale(1.02); }
+        }
+        
+        @keyframes luxurySlide {
+            0% { left: -100%; opacity: 0; }
+            50% { opacity: 1; }
+            100% { left: 100%; opacity: 0; }
+        }
+        
+        @keyframes luxuryPulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ELITE LUXURY PRELOADER -->
+    <div id="luxuryPreloader">
+        <div class="luxury-content">
+            <div class="luxury-logo">KRASIVO</div>
+            <div class="luxury-line"></div>
+            <div class="luxury-text">élite wedding experiences</div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1 class="logo">KRASIVO</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="team.html">Команда</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="reviews.html" class="active">Отзывы</a></li>
+                <li><a href="calculator.html">Калькулятор</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-badge">TESTIMONIALS</div>
+                <h1 style="
+                    font-size: 4rem !important;
+                    font-weight: 300 !important;
+                    font-family: 'Cormorant Garamond', serif !important;
+                    background: linear-gradient(135deg, #d4af37 0%, #ffd700 25%, #d4af37 50%, #b8860b 75%, #d4af37 100%) !important;
+                    background-clip: text !important;
+                    -webkit-background-clip: text !important;
+                    -webkit-text-fill-color: transparent !important;
+                    text-align: center !important;
+                    margin-bottom: 1.5rem !important;
+                    letter-spacing: 0.05em !important;
+                    text-shadow: 0 4px 8px rgba(212, 175, 55, 0.3) !important;
+                ">ОТЗЫВЫ КЛИЕНТОВ</h1>
+                <p class="hero-subtitle" style="font-size: 1.5rem !important; color: rgba(0, 0, 0, 0.8) !important; text-align: center !important; margin-bottom: 1rem !important; font-weight: 300 !important;">Истории роскоши от наших клиентов</p>
+                <p class="hero-description" style="font-size: 1.1rem !important; color: rgba(0, 0, 0, 0.7) !important; text-align: center !important; max-width: 600px !important; margin: 0 auto !important; line-height: 1.6 !important;">Каждый отзыв — это история о том, как мы превратили мечты в реальность. Читайте впечатления тех, кто доверил нам свои самые важные моменты.</p>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">ОТЗЫВЫ</span>
+                    <h2 class="section-title luxury-title">Что говорят наши клиенты</h2>
+                    <p class="section-subtitle">Мнения тех, кто выбрал совершенство</p>
+                </div>
+
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <div class="review-card luxury-card">
+                        <div class="review-header">
+                            <div class="client-photo">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Анна Петрова" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Анна Петрова</h4>
+                                <p class="client-position">Владелица галереи современного искусства</p>
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <blockquote>
+                                "KRASIVO превзошли все мои ожидания! Наша свадьба была настоящим произведением искусства. Каждая деталь была продумана до совершенства — от элегантной флористики до изысканного меню. Гости до сих пор говорят, что это была самая роскошная свадьба, на которой они когда-либо были."
+                            </blockquote>
+                        </div>
+                        <div class="review-event">
+                            <span class="event-type">Свадьба</span>
+                            <span class="event-date">Июнь 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card luxury-card">
+                        <div class="review-header">
+                            <div class="client-photo">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Дмитрий Волков" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Дмитрий Волков</h4>
+                                <p class="client-position">Директор IT-корпорации</p>
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <blockquote>
+                                "Организация корпоративного мероприятия на 500 человек — это серьезный вызов. KRASIVO справились блестяще! Профессионализм команды, внимание к деталям и безупречное исполнение. Наши партнеры были в восторге от уровня организации."
+                            </blockquote>
+                        </div>
+                        <div class="review-event">
+                            <span class="event-type">Корпоратив</span>
+                            <span class="event-date">Декабрь 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card luxury-card">
+                        <div class="review-header">
+                            <div class="client-photo">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Елена Сергеева" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Елена Сергеева</h4>
+                                <p class="client-position">Основательница модного дома</p>
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <blockquote>
+                                "День рождения моей дочери превратился в сказку! KRASIVO создали атмосферу волшебства — от декораций в стиле принцессы до изысканного детского меню. Даже взрослые гости были очарованы красотой и элегантностью праздника."
+                            </blockquote>
+                        </div>
+                        <div class="review-event">
+                            <span class="event-type">День рождения</span>
+                            <span class="event-date">Март 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card luxury-card">
+                        <div class="review-header">
+                            <div class="client-photo">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Александр Крылов" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Александр Крылов</h4>
+                                <p class="client-position">Владелец сети ресторанов</p>
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <blockquote>
+                                "Как профессионал в ресторанном бизнесе, я очень требователен к качеству сервиса. KRASIVO превзошли все мои ожидания на презентации нового ресторана. Безупречная организация, изысканная подача, внимание к каждой детали — это высший пилотаж!"
+                            </blockquote>
+                        </div>
+                        <div class="review-event">
+                            <span class="event-type">Презентация</span>
+                            <span class="event-date">Октябрь 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card luxury-card">
+                        <div class="review-header">
+                            <div class="client-photo">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="София Романова" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">София Романова</h4>
+                                <p class="client-position">Арт-директор креативного агентства</p>
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <blockquote>
+                                "Юбилей компании должен был стать особенным событием. KRASIVO не просто организовали мероприятие — они создали настоящее шоу! Каждый момент был продуман, каждая деталь идеальна. Наши клиенты и партнеры были в восторге."
+                            </blockquote>
+                        </div>
+                        <div class="review-event">
+                            <span class="event-type">Юбилей</span>
+                            <span class="event-date">Сентябрь 2025</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="review-card luxury-card">
+                        <div class="review-header">
+                            <div class="client-photo">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Михаил Борисов" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Михаил Борисов</h4>
+                                <p class="client-position">Инвестиционный банкир</p>
+                                <div class="rating">
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                    <span class="star">⭐</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <blockquote>
+                                "Бизнес-завтрак с иностранными инвесторами требовал особого подхода. KRASIVO продумали все до мелочей — от выбора места до культурных особенностей гостей. Результат превзошел ожидания: атмосфера была одновременно деловой и роскошной."
+                            </blockquote>
+                        </div>
+                        <div class="review-event">
+                            <span class="event-type">Бизнес-встреча</span>
+                            <span class="event-date">Ноябрь 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="reviews-stats">
+                    <div class="stats-grid">
+                        <div class="stat-item luxury-card">
+                            <div class="stat-number" data-target="500">0+</div>
+                            <div class="stat-label">Довольных клиентов</div>
+                        </div>
+                        <div class="stat-item luxury-card">
+                            <div class="stat-number" data-target="98">0%</div>
+                            <div class="stat-label">Рекомендуют нас</div>
+                        </div>
+                        <div class="stat-item luxury-card">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Лет опыта</div>
+                        </div>
+                        <div class="stat-item luxury-card">
+                            <div class="stat-number" data-target="100">0%</div>
+                            <div class="stat-label">Успешных событий</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="luxury-cta">
+                    <div class="cta-content">
+                        <h3>Станьте частью нашей истории успеха</h3>
+                        <p>Позвольте нам создать для вас событие, о котором будут говорить годами</p>
+                        <a href="calculator.html" class="btn btn-luxury" style="background: linear-gradient(135deg, #d4af37, #ffd700) !important; color: #000 !important; font-weight: 600 !important; padding: 12px 32px !important; border-radius: 6px !important; text-decoration: none !important; display: inline-block !important; transition: all 0.3s ease !important; border: none !important; text-transform: uppercase !important; letter-spacing: 0.5px !important; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3) !important;">СОЗДАТЬ СОБЫТИЕ МЕЧТЫ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>KRASIVO</h3>
+                    <p>создаём особенные моменты</p>
+                </div>
+                <div class="footer-contact">
+                    <p>8 920 814 06 04</p>
+                    <p>hello@krasivo.ru</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/79208140604" target="_blank" class="whatsapp-float" id="whatsappFloat">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2C9.717 2 3 8.717 3 17c0 2.518.64 4.888 1.764 6.956L3.2 30.8c-.25.75.4 1.45 1.15 1.2l6.844-1.564C13.112 31.36 15.482 32 18 32c8.283 0 15-6.717 15-15S26.283 2 18 2zm6.975 20.325c-.45 1.2-2.25 2.175-3.75 2.4-1.05.15-2.4.225-5.475-1.125-3.975-1.725-6.75-6-6.975-6.3-.225-.3-1.8-2.4-1.8-4.575s1.125-3.225 1.575-3.675c.45-.45 1.05-.675 1.35-.675s.6 0 .825.075c.3.075.675-.075 1.05.75.375.825 1.275 2.925 1.425 3.15.15.225.225.525.075.825-.15.3-.225.525-.45.825-.225.3-.45.525-.675.825-.225.3-.45.6-.15 1.125.3.525 1.35 2.175 2.925 3.525 2.025 1.725 3.675 2.25 4.2 2.475.525.225.825.15 1.125-.15.3-.3 1.275-1.5 1.575-2.025.3-.525.6-.45 1.05-.3.45.15 2.85 1.35 3.375 1.575.525.225.875.375 1.05.6.15.225.15 1.275-.225 2.625z" fill="white" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+        </svg>
+        <div class="whatsapp-tooltip">WhatsApp</div>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>

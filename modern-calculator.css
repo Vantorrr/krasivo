@@ -1,0 +1,806 @@
+/* Modern Calculator Styles - Топ-1 в мире! */
+
+.calculator {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, 
+        rgba(247, 245, 243, 0.4) 0%, 
+        rgba(255, 255, 255, 0.8) 50%, 
+        rgba(232, 225, 216, 0.4) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.calculator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139, 154, 119, 0.06) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.calculator-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Modern Form Container */
+.calculator-form-modern {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 
+        0 32px 64px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(139, 154, 119, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.calculator-form-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        var(--color-gold) 0%, 
+        var(--color-rose-gold) 50%, 
+        var(--color-secondary) 100%);
+}
+
+/* Form Header */
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(139, 154, 119, 0.1);
+}
+
+.form-header h3 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.form-header p {
+    color: var(--color-gray-medium);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Modern Form */
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+/* Select Wrapper */
+.select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: 56px;
+    padding: 0 48px 0 20px;
+    border: 2px solid rgba(139, 154, 119, 0.2);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.select-wrapper select:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    background: var(--color-white);
+    box-shadow: 
+        0 0 0 4px rgba(139, 154, 119, 0.1),
+        0 8px 32px rgba(139, 154, 119, 0.15);
+    transform: translateY(-1px);
+}
+
+.select-wrapper select:hover {
+    border-color: var(--color-secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(139, 154, 119, 0.1);
+}
+
+.select-icon {
+    position: absolute;
+    right: 16px;
+    color: var(--color-secondary);
+    pointer-events: none;
+    transition: var(--transition-smooth);
+}
+
+.select-wrapper:focus-within .select-icon {
+    transform: rotate(180deg);
+    color: var(--color-gold);
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 56px;
+    padding: 0 48px 0 20px;
+    border: 2px solid rgba(139, 154, 119, 0.2);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--color-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    background: var(--color-white);
+    box-shadow: 
+        0 0 0 4px rgba(139, 154, 119, 0.1),
+        0 8px 32px rgba(139, 154, 119, 0.15);
+    transform: translateY(-1px);
+}
+
+.input-wrapper input:hover {
+    border-color: var(--color-secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(139, 154, 119, 0.1);
+}
+
+.input-wrapper input::placeholder {
+    color: var(--color-gray-medium);
+    font-style: italic;
+}
+
+.input-icon {
+    position: absolute;
+    right: 16px;
+    font-size: 1.2rem;
+    pointer-events: none;
+    opacity: 0.7;
+    transition: var(--transition-smooth);
+}
+
+.input-wrapper:focus-within .input-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Modern Button */
+.form-submit {
+    margin-top: 16px;
+}
+
+.btn-modern {
+    width: 100%;
+    height: 64px;
+    padding: 0 32px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, 
+        var(--color-primary) 0%, 
+        var(--color-gray-dark) 100%);
+    color: var(--color-white);
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(26, 26, 26, 0.3);
+}
+
+.btn-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-modern:hover::before {
+    left: 100%;
+}
+
+.btn-modern:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(26, 26, 26, 0.4);
+    background: linear-gradient(135deg, 
+        var(--color-gray-dark) 0%, 
+        var(--color-primary) 100%);
+}
+
+.btn-modern:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(26, 26, 26, 0.3);
+}
+
+.btn-arrow {
+    transition: var(--transition-smooth);
+}
+
+.btn-modern:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Options Styling */
+.select-wrapper select option {
+    background: var(--color-white);
+    color: var(--color-primary);
+    padding: 16px;
+    font-size: 1rem;
+    border: none;
+}
+
+.select-wrapper select option:hover,
+.select-wrapper select option:checked {
+    background: linear-gradient(135deg, var(--color-light) 0%, var(--color-beige) 100%);
+    color: var(--color-primary);
+}
+
+.select-wrapper select option:first-child {
+    color: var(--color-gray-medium);
+    font-style: italic;
+}
+
+/* Validation States */
+.form-field.error .select-wrapper select,
+.form-field.error .input-wrapper input {
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.05);
+    animation: shake 0.5s ease-in-out;
+}
+
+.form-field.success .select-wrapper select,
+.form-field.success .input-wrapper input {
+    border-color: #27ae60;
+    background: rgba(39, 174, 96, 0.05);
+    animation: successPulse 0.3s ease-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+    20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Loading State */
+.btn-modern.loading {
+    pointer-events: none;
+}
+
+.btn-modern.loading span {
+    opacity: 0;
+}
+
+.btn-modern.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid var(--color-white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modern Calculator Result */
+.calculator-result-modern {
+    margin-top: 32px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.calculator-result-modern.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result-container {
+    background: linear-gradient(135deg, 
+        var(--color-secondary) 0%, 
+        var(--color-olive) 100%);
+    color: var(--color-white);
+    border-radius: 24px;
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 32px 64px rgba(139, 154, 119, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.result-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.result-header {
+    text-align: center;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.result-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    animation: resultIconPulse 2s ease-in-out infinite;
+}
+
+@keyframes resultIconPulse {
+    0%, 100% { 
+        transform: scale(1); 
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+    }
+    50% { 
+        transform: scale(1.05); 
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}
+
+.result-header h3 {
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.result-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.result-price-container {
+    text-align: center;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.result-price {
+    font-family: var(--font-primary);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 300;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: priceCountUp 1s ease-out 0.5s both;
+}
+
+@keyframes priceCountUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.price-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(10px);
+}
+
+.result-breakdown {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.result-breakdown p {
+    color: var(--color-white);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-breakdown p:last-child {
+    margin-bottom: 0;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.result-note {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 32px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.note-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.note-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.note-text strong {
+    color: var(--color-white);
+}
+
+.result-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-primary-modern {
+    background: linear-gradient(135deg, var(--color-white) 0%, rgba(255, 255, 255, 0.9) 100%);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-white);
+}
+
+.btn-primary-modern:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary-modern {
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary-modern:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced Calculator Info */
+.calculator-info {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 40px;
+    border: 1px solid rgba(139, 154, 119, 0.1);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.05);
+    margin-top: 32px;
+}
+
+.calculator-info h3 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+}
+
+.info-item {
+    text-align: center;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    border: 1px solid rgba(139, 154, 119, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.info-item:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.info-item h4 {
+    font-size: 1rem;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.info-item p {
+    font-size: 0.9rem;
+    color: var(--color-gray-dark);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calculator {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .calculator-form-modern {
+        padding: 32px 24px;
+        border-radius: 20px;
+        margin: 0 16px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .form-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .select-wrapper select,
+    .input-wrapper input {
+        height: 52px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 0 44px 0 16px;
+    }
+    
+    .btn-modern {
+        height: 56px;
+        font-size: 1rem;
+        padding: 0 24px;
+    }
+    
+    .calculator-info {
+        padding: 24px;
+        margin-top: 24px;
+        margin: 24px 16px 0;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .result-container {
+        padding: 32px 24px;
+        margin: 24px 16px 0;
+    }
+    
+    .result-price {
+        font-size: 2.5rem;
+    }
+    
+    .result-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .btn-primary-modern,
+    .btn-secondary-modern {
+        width: 100%;
+        height: 52px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator-form-modern {
+        padding: 24px 16px;
+        margin: 0 8px;
+    }
+    
+    .form-header {
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+    }
+    
+    .form-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .modern-form {
+        gap: 20px;
+    }
+    
+    .form-field label {
+        font-size: 0.85rem;
+    }
+    
+    .select-wrapper select,
+    .input-wrapper input {
+        height: 48px;
+        padding: 0 40px 0 14px;
+        font-size: 15px;
+    }
+    
+    .select-icon {
+        right: 12px;
+    }
+    
+    .input-icon {
+        right: 12px;
+        font-size: 1rem;
+    }
+    
+    .btn-modern {
+        height: 52px;
+        font-size: 0.95rem;
+        border-radius: 16px;
+    }
+    
+    .calculator-info {
+        padding: 20px 16px;
+        margin: 20px 8px 0;
+    }
+    
+    .info-item {
+        padding: 16px;
+    }
+    
+    .result-container {
+        padding: 24px 16px;
+        margin: 20px 8px 0;
+        border-radius: 20px;
+    }
+    
+    .result-header {
+        margin-bottom: 24px;
+    }
+    
+    .result-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 12px;
+    }
+    
+    .result-header h3 {
+        font-size: 1.4rem;
+    }
+    
+    .result-price {
+        font-size: 2rem;
+    }
+    
+    .result-breakdown {
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+    
+    .result-breakdown p {
+        font-size: 0.9rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .result-note {
+        padding: 12px;
+        margin-bottom: 24px;
+    }
+    
+    .note-text {
+        font-size: 0.85rem;
+    }
+}

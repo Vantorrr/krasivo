@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRASIVO | Элитное свадебное агентство премиум-класса | Роскошные события для избранных</title>
+    <meta name="description" content="Элитное свадебное агентство KRASIVO - создаем роскошные события для самых взыскательных клиентов. Эксклюзивные свадьбы, корпоративы, торжества. Безупречный сервис уровня Bulgari.">
+    <meta name="keywords" content="элитное свадебное агентство, премиум свадьбы, роскошные торжества, организация VIP событий, эксклюзивные мероприятия Москва, luxury wedding planner">
+    <meta property="og:title" content="KRASIVO - Элитное свадебное агентство премиум-класса">
+    <meta property="og:description" content="Создаем роскошные события для самых взыскательных клиентов. Безупречный сервис, эксклюзивный подход.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="luxury-design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ELITE LUXURY PRELOADER - уровня Cartier/Chanel */
+        #luxuryPreloader {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%) !important;
+            z-index: 999999 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            opacity: 1 !important;
+            transition: opacity 1.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+        }
+        
+        #luxuryPreloader.luxury-fade-out {
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+        
+        .luxury-content {
+            text-align: center !important;
+            position: relative !important;
+        }
+        
+        .luxury-logo {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 4.5rem !important;
+            font-weight: 300 !important;
+            color: #d4af37 !important;
+            letter-spacing: 0.15em !important;
+            margin-bottom: 30px !important;
+            background: linear-gradient(45deg, #d4af37, #ffd700, #d4af37, #b8860b) !important;
+            background-size: 400% 400% !important;
+            background-clip: text !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5) !important;
+            animation: luxuryShimmer 3s ease-in-out infinite, luxuryFloat 4s ease-in-out infinite !important;
+        }
+        
+        .luxury-line {
+            width: 300px !important;
+            height: 1px !important;
+            background: linear-gradient(90deg, transparent 20%, #d4af37 50%, #d4af37 70%, transparent) !important;
+            margin: 0 0 25px 0 !important;
+            position: absolute !important;
+            opacity: 0.8 !important;
+            display: block !important;
+            left: 50% !important;
+            transform: translateX(0%) !important;
+        }
+        
+        .luxury-line::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: -100% !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: linear-gradient(90deg, transparent, #ffd700, transparent) !important;
+            animation: luxurySlide 2s ease-in-out infinite !important;
+        }
+        
+        .luxury-text {
+            color: #d4af37 !important;
+            font-family: 'Cormorant Garamond', serif !important;
+            font-style: italic !important;
+            font-size: 1rem !important;
+            font-weight: 300 !important;
+            letter-spacing: 0.2em !important;
+            opacity: 0.9 !important;
+            text-transform: lowercase !important;
+            animation: luxuryPulse 2.5s ease-in-out infinite !important;
+        }
+        
+        @keyframes luxuryShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes luxuryFloat {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-8px) scale(1.02); }
+        }
+        
+        @keyframes luxurySlide {
+            0% { left: -100%; opacity: 0; }
+            50% { opacity: 1; }
+            100% { left: 100%; opacity: 0; }
+        }
+        
+        @keyframes luxuryPulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ELITE LUXURY PRELOADER -->
+    <div id="luxuryPreloader">
+        <div class="luxury-content">
+            <div class="luxury-logo">KRASIVO</div>
+            <div class="luxury-line"></div>
+            <div class="luxury-text">élite wedding experiences</div>
+        </div>
+    </div>
+
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1 class="logo">KRASIVO</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="team.html">Команда</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="calculator.html">Калькулятор</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content hero-content-centered">
+                <div class="hero-text">
+                    <div class="hero-badge">PREMIUM EVENTS</div>
+                    <h1 class="hero-title">KRASIVO</h1>
+                    <p class="hero-subtitle">Безупречные события для избранных</p>
+                    <p class="hero-description">Мы создаем роскошные торжества, где каждая деталь отражает ваш изысканный вкус. Эксклюзивный сервис для самых взыскательных клиентов.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Роскошных событий</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Лет совершенства</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Довольных клиентов</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="calculator.html" class="btn btn-luxury">Рассчитать стоимость</a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">О НАС</span>
+                    <h2 class="section-title luxury-title">Эталон роскоши и совершенства</h2>
+                    <p class="section-subtitle">Мы создаем не просто события — мы творим шедевры</p>
+                </div>
+                <div class="about-content luxury-grid">
+                    <div class="about-text luxury-text">
+                        <div class="luxury-feature">
+                            <div class="feature-icon">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="exclusiveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+                                            <stop offset="30%" style="stop-color:#ffd700;stop-opacity:1" />
+                                            <stop offset="70%" style="stop-color:#d4af37;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M25 5L37 15L32 32L25 45L18 32L13 15L25 5Z" fill="url(#exclusiveGrad)" stroke="#b8860b" stroke-width="1"/>
+                                    <path d="M25 5L32 15L25 25L18 15L25 5Z" fill="#ffd700" stroke="#d4af37" stroke-width="0.5"/>
+                                    <path d="M13 15L18 15L25 25L18 32L13 15Z" fill="#d4af37" opacity="0.8"/>
+                                    <path d="M37 15L32 15L25 25L32 32L37 15Z" fill="#d4af37" opacity="0.8"/>
+                                    <path d="M18 32L25 25L32 32L25 45L18 32Z" fill="#b8860b" opacity="0.6"/>
+                                    <circle cx="25" cy="18" r="2" fill="#ffd700"/>
+                                    <circle cx="22" cy="22" r="1" fill="#ffffff" opacity="0.8"/>
+                                    <circle cx="28" cy="22" r="1" fill="#ffffff" opacity="0.8"/>
+                                </svg>
+                            </div>
+                            <h3>Эксклюзивность</h3>
+                            <p>Каждое событие уникально, как драгоценный камень. Мы создаем торжества, которые невозможно повторить.</p>
+                        </div>
+                        
+                        <div class="luxury-feature">
+                            <div class="feature-icon">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="crownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                                            <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M8 35L12 20L18 28L25 15L32 28L38 20L42 35L40 40H10L8 35Z" fill="url(#crownGrad)" stroke="#b8860b" stroke-width="1"/>
+                                    <circle cx="12" cy="20" r="3" fill="#ffd700" stroke="#d4af37" stroke-width="0.5"/>
+                                    <circle cx="25" cy="15" r="4" fill="#ffd700" stroke="#d4af37" stroke-width="0.5"/>
+                                    <circle cx="38" cy="20" r="3" fill="#ffd700" stroke="#d4af37" stroke-width="0.5"/>
+                                    <rect x="10" y="35" width="30" height="5" fill="#d4af37" stroke="#b8860b" stroke-width="0.5"/>
+                                    <circle cx="15" cy="25" r="1.5" fill="#ffffff" opacity="0.8"/>
+                                    <circle cx="25" cy="22" r="2" fill="#ffffff" opacity="0.9"/>
+                                    <circle cx="35" cy="25" r="1.5" fill="#ffffff" opacity="0.8"/>
+                                    <path d="M15 37L20 37L22 39L25 37L28 39L30 37L35 37" stroke="#ffd700" stroke-width="1" fill="none"/>
+                                </svg>
+                            </div>
+                            <h3>Безупречность</h3>
+                            <p>Только лучшие материалы, проверенные годами партнеры и команда профессионалов мирового уровня.</p>
+                        </div>
+                        
+                        <div class="luxury-feature">
+                            <div class="feature-icon">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                                            <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <path d="M25 5L30 18L45 18L33 28L38 42L25 33L12 42L17 28L5 18L20 18L25 5Z" fill="url(#starGrad)" stroke="#b8860b" stroke-width="1"/>
+                                    <path d="M25 5L28 15L35 15L30 20L32 28L25 23L18 28L20 20L15 15L22 15L25 5Z" fill="#ffd700" opacity="0.8"/>
+                                    <circle cx="25" cy="20" r="3" fill="#ffffff" opacity="0.6"/>
+                                    <circle cx="20" cy="25" r="1" fill="#ffffff" opacity="0.8"/>
+                                    <circle cx="30" cy="25" r="1" fill="#ffffff" opacity="0.8"/>
+                                    <circle cx="25" cy="30" r="1.5" fill="#ffffff" opacity="0.7"/>
+                                    <path d="M25 8L26 16L28 8" stroke="#ffffff" stroke-width="0.5" opacity="0.8"/>
+                                    <path d="M38 18L30 19L38 20" stroke="#ffffff" stroke-width="0.5" opacity="0.8"/>
+                                    <path d="M35 38L27 30L35 39" stroke="#ffffff" stroke-width="0.5" opacity="0.8"/>
+                                    <path d="M15 38L23 30L15 39" stroke="#ffffff" stroke-width="0.5" opacity="0.8"/>
+                                    <path d="M12 18L20 19L12 20" stroke="#ffffff" stroke-width="0.5" opacity="0.8"/>
+                                </svg>
+                            </div>
+                            <h3>Совершенство</h3>
+                            <p>Мы доводим каждую деталь до идеала, создавая события, которые превосходят самые смелые ожидания.</p>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="luxury-gallery">
+                            <div class="gallery-item main">
+                                <img src="images/1.jpg.webp" alt="Элитная свадебная церемония" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px; box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);">
+                            </div>
+                            <div class="gallery-stats">
+                                <div class="luxury-stat">
+                                    <span class="stat-value">₽15M+</span>
+                                    <span class="stat-desc">Средний бюджет события</span>
+                                </div>
+                                <div class="luxury-stat">
+                                    <span class="stat-value">72ч</span>
+                                    <span class="stat-desc">Средняя подготовка</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="sparkleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M25 8L27 20L35 18L28 25L40 30L28 35L35 42L27 30L25 42L23 30L15 42L22 35L10 30L22 25L15 18L23 20L25 8Z" fill="url(#sparkleGrad)" stroke="#b8860b" stroke-width="0.8"/>
+                                <circle cx="25" cy="25" r="4" fill="#ffd700" opacity="0.8"/>
+                                <path d="M25 15L26 22L30 21L27 25L33 28L27 31L30 35L26 28L25 35L24 28L20 35L23 31L17 28L23 25L20 21L24 22L25 15Z" fill="#ffffff" opacity="0.6"/>
+                                <circle cx="12" cy="12" r="2" fill="#d4af37" opacity="0.7"/>
+                                <path d="M12 8L13 12L16 11L13.5 13L17 15L13.5 17L16 19L13 17L12 21L11 17L8 19L10.5 17L7 15L10.5 13L8 11L11 12L12 8Z" fill="#d4af37" opacity="0.8"/>
+                                <circle cx="38" cy="15" r="1.5" fill="#d4af37" opacity="0.6"/>
+                                <path d="M38 12L38.5 15L41 14L39 16L42 18L39 20L41 22L38.5 20L38 23L37.5 20L35 22L37 20L34 18L37 16L35 14L37.5 15L38 12Z" fill="#d4af37" opacity="0.7"/>
+                                <circle cx="15" cy="38" r="1.5" fill="#d4af37" opacity="0.6"/>
+                                <circle cx="35" cy="35" r="1" fill="#d4af37" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <h3>Индивидуальный подход</h3>
+                        <p>Каждое мероприятие уникально, как и наши клиенты. Мы создаём события, которые отражают вашу личность.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="qualityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+                                        <stop offset="25%" style="stop-color:#ffd700;stop-opacity:1" />
+                                        <stop offset="75%" style="stop-color:#d4af37;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M25 6L36 16L31 34L25 46L19 34L14 16L25 6Z" fill="url(#qualityGrad)" stroke="#b8860b" stroke-width="1"/>
+                                <path d="M25 6L31 16L25 26L19 16L25 6Z" fill="#ffd700" stroke="#d4af37" stroke-width="0.5"/>
+                                <path d="M14 16L19 16L25 26L19 34L14 16Z" fill="#d4af37" opacity="0.9"/>
+                                <path d="M36 16L31 16L25 26L31 34L36 16Z" fill="#d4af37" opacity="0.9"/>
+                                <path d="M19 34L25 26L31 34L25 46L19 34Z" fill="#b8860b" opacity="0.7"/>
+                                <circle cx="25" cy="19" r="2.5" fill="#ffffff" opacity="0.9"/>
+                                <circle cx="21" cy="23" r="1" fill="#ffffff" opacity="0.7"/>
+                                <circle cx="29" cy="23" r="1" fill="#ffffff" opacity="0.7"/>
+                                <circle cx="25" cy="28" r="1.5" fill="#ffffff" opacity="0.6"/>
+                                <path d="M20 20L30 20" stroke="#ffffff" stroke-width="0.5" opacity="0.8"/>
+                                <path d="M22 30L28 30" stroke="#ffffff" stroke-width="0.5" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h3>Безупречное качество</h3>
+                        <p>Внимание к каждой детали и высочайшие стандарты. Работаем только с проверенными партнёрами.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="handshakeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#ffd700;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M8 28C8 24 10 22 12 22L18 22L20 20L22 22L28 22L30 20L32 22L38 22C40 22 42 24 42 28L42 32C42 34 40 36 38 36L32 36L30 34L28 36L22 36L20 34L18 36L12 36C10 36 8 34 8 32L8 28Z" fill="url(#handshakeGrad)" stroke="#b8860b" stroke-width="1"/>
+                                <circle cx="16" cy="18" r="4" fill="#d4af37" stroke="#b8860b" stroke-width="0.5"/>
+                                <circle cx="34" cy="18" r="4" fill="#d4af37" stroke="#b8860b" stroke-width="0.5"/>
+                                <path d="M12 22L18 22L22 26L28 26L32 22L38 22" stroke="#ffd700" stroke-width="2" fill="none"/>
+                                <path d="M20 24L22 26L28 26L30 24" stroke="#ffffff" stroke-width="1.5" opacity="0.8" fill="none"/>
+                                <circle cx="25" cy="25" r="2" fill="#ffffff" opacity="0.6"/>
+                                <path d="M10 30L14 30" stroke="#ffd700" stroke-width="1" opacity="0.8"/>
+                                <path d="M36 30L40 30" stroke="#ffd700" stroke-width="1" opacity="0.8"/>
+                                <circle cx="16" cy="16" r="1" fill="#ffffff" opacity="0.8"/>
+                                <circle cx="34" cy="16" r="1" fill="#ffffff" opacity="0.8"/>
+                            </svg>
+                        </div>
+                        <h3>Полное сопровождение</h3>
+                        <p>От идеи до воплощения — мы с вами на каждом этапе. Координируем всё, чтобы вы наслаждались моментом.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="targetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#ffd700;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="25" cy="25" r="20" fill="none" stroke="url(#targetGrad)" stroke-width="2"/>
+                                <circle cx="25" cy="25" r="15" fill="none" stroke="url(#targetGrad)" stroke-width="1.5"/>
+                                <circle cx="25" cy="25" r="10" fill="none" stroke="url(#targetGrad)" stroke-width="1.5"/>
+                                <circle cx="25" cy="25" r="5" fill="url(#targetGrad)"/>
+                                <circle cx="25" cy="25" r="2" fill="#ffffff" opacity="0.9"/>
+                                <path d="M25 5L27 23L45 25L27 27L25 45L23 27L5 25L23 23L25 5Z" fill="#ffd700" opacity="0.6"/>
+                                <circle cx="25" cy="25" r="1" fill="#ffd700"/>
+                                <path d="M15 15L35 35" stroke="#ffd700" stroke-width="1" opacity="0.7"/>
+                                <path d="M35 15L15 35" stroke="#ffd700" stroke-width="1" opacity="0.7"/>
+                            </svg>
+                        </div>
+                        <h3>Эксклюзивность</h3>
+                        <p>Уникальные концепции и нестандартные решения. Ваше мероприятие не будет похоже на другие.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="timeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                                        <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="25" cy="25" r="18" fill="url(#timeGrad)" stroke="#b8860b" stroke-width="2"/>
+                                <circle cx="25" cy="25" r="15" fill="none" stroke="#ffd700" stroke-width="0.5"/>
+                                <circle cx="25" cy="25" r="1.5" fill="#b8860b"/>
+                                <path d="M25 25L25 12" stroke="#b8860b" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M25 25L32 25" stroke="#b8860b" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M25 9L25 13" stroke="#ffd700" stroke-width="1.5"/>
+                                <path d="M41 25L37 25" stroke="#ffd700" stroke-width="1.5"/>
+                                <path d="M25 41L25 37" stroke="#ffd700" stroke-width="1.5"/>
+                                <path d="M9 25L13 25" stroke="#ffd700" stroke-width="1.5"/>
+                                <circle cx="25" cy="9" r="1.5" fill="#ffd700"/>
+                                <circle cx="41" cy="25" r="1.5" fill="#ffd700"/>
+                                <circle cx="25" cy="41" r="1.5" fill="#ffd700"/>
+                                <circle cx="9" cy="25" r="1.5" fill="#ffd700"/>
+                                <path d="M32 18L36 14" stroke="#d4af37" stroke-width="1"/>
+                                <path d="M36 36L32 32" stroke="#d4af37" stroke-width="1"/>
+                                <path d="M18 32L14 36" stroke="#d4af37" stroke-width="1"/>
+                                <path d="M14 14L18 18" stroke="#d4af37" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <h3>Пунктуальность</h3>
+                        <p>Ценим ваше время и соблюдаем все сроки. Никаких задержек и неожиданностей в день события.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="dreamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+                                        <stop offset="30%" style="stop-color:#d4af37;stop-opacity:1" />
+                                        <stop offset="70%" style="stop-color:#ffd700;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#b8860b;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <path d="M25 3L31 16L46 16L35 26L41 41L25 33L9 41L15 26L4 16L19 16L25 3Z" fill="url(#dreamGrad)" stroke="#b8860b" stroke-width="1.5"/>
+                                <path d="M25 8L29 18L38 18L31 24L34 34L25 29L16 34L19 24L12 18L21 18L25 8Z" fill="#ffffff" opacity="0.7"/>
+                                <circle cx="25" cy="22" r="4" fill="#ffd700" opacity="0.8"/>
+                                <circle cx="20" cy="27" r="1.5" fill="#ffffff" opacity="0.9"/>
+                                <circle cx="30" cy="27" r="1.5" fill="#ffffff" opacity="0.9"/>
+                                <circle cx="25" cy="32" r="2" fill="#ffffff" opacity="0.8"/>
+                                <path d="M25 5L26 14L29 6" stroke="#ffffff" stroke-width="0.8" opacity="0.9"/>
+                                <path d="M42 16L33 17L42 18" stroke="#ffffff" stroke-width="0.8" opacity="0.9"/>
+                                <path d="M38 38L30 31L38 39" stroke="#ffffff" stroke-width="0.8" opacity="0.9"/>
+                                <path d="M12 38L20 31L12 39" stroke="#ffffff" stroke-width="0.8" opacity="0.9"/>
+                                <path d="M8 16L17 17L8 18" stroke="#ffffff" stroke-width="0.8" opacity="0.9"/>
+                                <circle cx="15" cy="15" r="1" fill="#d4af37" opacity="0.6"/>
+                                <circle cx="35" cy="15" r="1" fill="#d4af37" opacity="0.6"/>
+                                <circle cx="35" cy="35" r="1" fill="#d4af37" opacity="0.6"/>
+                                <circle cx="15" cy="35" r="1" fill="#d4af37" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <h3>Результат мечты</h3>
+                        <p>Превосходим ожидания клиентов. 98% рекомендуют нас своим друзьям и возвращаются снова.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Проведённых мероприятий</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Лет безупречной работы</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">% довольных клиентов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Надёжных партнёров</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta luxury-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-badge">ЭКСКЛЮЗИВНОЕ ПРЕДЛОЖЕНИЕ</div>
+                    <h2 class="cta-title">Готовы создать шедевр?</h2>
+                    <p class="cta-description">Доверьте нам воплощение ваших самых амбициозных идей. Каждое событие — произведение искусства.</p>
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <span class="feature-check">✓</span>
+                            <span>Персональный консультант</span>
+                        </div>
+                        <div class="cta-feature">
+                            <span class="feature-check">✓</span>
+                            <span>Эксклюзивные площадки</span>
+                        </div>
+                        <div class="cta-feature">
+                            <span class="feature-check">✓</span>
+                            <span>Безлимитные корректировки</span>
+                        </div>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="calculator.html" class="btn btn-luxury-cta">Рассчитать стоимость</a>
+                        <div class="cta-note">Консультация бесплатно</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>KRASIVO</h3>
+                    <p>создаём особенные моменты</p>
+                </div>
+                <div class="footer-contact">
+                    <p>8 920 814 06 04</p>
+                    <p>hello@krasivo.ru</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/79208140604" target="_blank" class="whatsapp-float" id="whatsappFloat">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2C9.717 2 3 8.717 3 17c0 2.518.64 4.888 1.764 6.956L3.2 30.8c-.25.75.4 1.45 1.15 1.2l6.844-1.564C13.112 31.36 15.482 32 18 32c8.283 0 15-6.717 15-15S26.283 2 18 2zm6.975 20.325c-.45 1.2-2.25 2.175-3.75 2.4-1.05.15-2.4.225-5.475-1.125-3.975-1.725-6.75-6-6.975-6.3-.225-.3-1.8-2.4-1.8-4.575s1.125-3.225 1.575-3.675c.45-.45 1.05-.675 1.35-.675s.6 0 .825.075c.3.075.675-.075 1.05.75.375.825 1.275 2.925 1.425 3.15.15.225.225.525.075.825-.15.3-.225.525-.45.825-.225.3-.45.525-.675.825-.225.3-.45.6-.15 1.125.3.525 1.35 2.175 2.925 3.525 2.025 1.725 3.675 2.25 4.2 2.475.525.225.825.15 1.125-.15.3-.3 1.275-1.5 1.575-2.025.3-.525.6-.45 1.05-.3.45.15 2.85 1.35 3.375 1.575.525.225.875.375 1.05.6.15.225.15 1.275-.225 2.625z" fill="white" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+        </svg>
+        <div class="whatsapp-tooltip">WhatsApp</div>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="particles.js"></script>
+</body>
+</html>
+</html>

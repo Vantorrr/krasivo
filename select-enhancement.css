@@ -1,0 +1,286 @@
+/* Enhanced Select Styling - Премиум стиль */
+
+/* Основной контейнер для select */
+.form-group {
+    position: relative;
+}
+
+/* Кастомная стрелочка для select */
+.form-group select {
+    background-image: none !important;
+    position: relative;
+}
+
+.form-group::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--color-secondary);
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: var(--transition-smooth);
+    z-index: 2;
+}
+
+/* Анимация стрелочки при фокусе */
+.form-group:focus-within::after {
+    border-top-color: var(--color-gold);
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Анимация стрелочки при hover */
+.form-group:hover::after {
+    border-top-color: var(--color-secondary);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Дополнительное оформление select */
+.form-group select {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(247, 245, 243, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+}
+
+/* Эффект при открытии select */
+.form-group select:focus {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(247, 245, 243, 1) 100%);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2);
+}
+
+/* Стилизация option элементов */
+.form-group select option {
+    padding: 15px 20px;
+    background: var(--color-white);
+    color: var(--color-primary);
+    font-weight: 400;
+    border: none;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.form-group select option:first-child {
+    color: var(--color-gray-medium);
+    font-style: italic;
+}
+
+.form-group select option:hover {
+    background: linear-gradient(135deg, var(--color-light) 0%, var(--color-beige) 100%);
+    color: var(--color-primary);
+}
+
+.form-group select option:checked {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-olive) 100%);
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+/* Анимация при изменении значения */
+.form-group select.value-changed {
+    animation: selectValueChange 0.3s ease-out;
+}
+
+@keyframes selectValueChange {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 8px 25px rgba(139, 154, 119, 0.2);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+}
+
+/* Улучшенные эффекты для мобильных устройств */
+@media (max-width: 768px) {
+    .form-group select {
+        font-size: 16px; /* Предотвращает зум на iOS */
+        padding: 18px 50px 18px 20px;
+    }
+    
+    .form-group::after {
+        right: 20px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 10px solid var(--color-secondary);
+    }
+}
+
+/* Дополнительные visual эффекты */
+.form-group select:invalid {
+    border-color: rgba(231, 76, 60, 0.5);
+    background: linear-gradient(135deg, 
+        rgba(255, 245, 245, 0.95) 0%, 
+        rgba(255, 235, 235, 0.95) 100%);
+}
+
+.form-group select:valid:not(:focus) {
+    border-color: rgba(46, 204, 113, 0.5);
+    background: linear-gradient(135deg, 
+        rgba(245, 255, 245, 0.95) 0%, 
+        rgba(235, 255, 235, 0.95) 100%);
+}
+
+/* Премиум градиентная рамка */
+.form-group.premium {
+    background: linear-gradient(45deg, var(--color-gold), var(--color-rose-gold));
+    padding: 2px;
+    border-radius: 12px;
+}
+
+.form-group.premium select {
+    border: none;
+    border-radius: 10px;
+    background: var(--color-white);
+}
+
+/* Эффект золотого свечения при фокусе */
+.form-group.premium:focus-within {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    animation: goldGlow 2s ease-in-out infinite;
+}
+
+@keyframes goldGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+    }
+}
+
+/* Премиум стили для input и textarea */
+.form-group.premium input,
+.form-group.premium textarea {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(247, 245, 243, 0.95) 100%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    transition: var(--transition-smooth);
+}
+
+.form-group.premium input:focus,
+.form-group.premium textarea:focus {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(247, 245, 243, 1) 100%);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px);
+}
+
+.form-group.premium input:valid:not(:focus),
+.form-group.premium textarea:valid:not(:focus) {
+    background: linear-gradient(135deg, 
+        rgba(245, 255, 245, 0.95) 0%, 
+        rgba(240, 255, 240, 0.95) 100%);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.1);
+}
+
+/* Анимация для textarea */
+.form-group.premium textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group.premium textarea:focus {
+    animation: textareaExpand 0.3s ease-out;
+}
+
+@keyframes textareaExpand {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.01);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Плавающие labels */
+.form-group.premium label {
+    font-weight: 600;
+    color: var(--color-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.form-group.premium:focus-within label {
+    color: var(--color-gold);
+    transform: scale(1.05);
+}
+
+/* Дополнительные микроанимации */
+.form-group.premium input:hover,
+.form-group.premium textarea:hover,
+.form-group.premium select:hover {
+    transform: translateY(-1px);
+}
+
+/* Состояние success */
+.form-group.premium.success input,
+.form-group.premium.success textarea,
+.form-group.premium.success select {
+    background: linear-gradient(135deg, 
+        rgba(245, 255, 245, 1) 0%, 
+        rgba(240, 255, 240, 1) 100%);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+}
+
+/* Состояние error */
+.form-group.premium.error input,
+.form-group.premium.error textarea,
+.form-group.premium.error select {
+    background: linear-gradient(135deg, 
+        rgba(255, 245, 245, 1) 0%, 
+        rgba(255, 240, 240, 1) 100%);
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.2);
+}
+
+/* Плейсхолдеры */
+.form-group.premium input::placeholder,
+.form-group.premium textarea::placeholder {
+    color: var(--color-gray-medium);
+    font-style: italic;
+    transition: var(--transition-smooth);
+}
+
+.form-group.premium input:focus::placeholder,
+.form-group.premium textarea:focus::placeholder {
+    color: transparent;
+}
+
+/* Эффект печатания для placeholder */
+.typing-placeholder::placeholder {
+    color: transparent;
+}
+
+.typing-placeholder.typing::placeholder {
+    color: var(--color-gray-medium);
+    animation: typing 2s steps(40, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
