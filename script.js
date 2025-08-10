@@ -53,8 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+            const isOpen = navMenu.classList.toggle('active');
             navToggle.classList.toggle('active');
+            document.body.classList.toggle('nav-open', isOpen);
         });
     }
 
@@ -64,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
+            document.body.classList.remove('nav-open');
         });
     });
 
