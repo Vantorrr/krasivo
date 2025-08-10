@@ -505,30 +505,30 @@ body.nav-open {
         padding-bottom: var(--spacing-xl); 
     }
     .page-hero h1 { 
-        font-size: 2.4rem !important; 
+        font-size: 2.8rem !important; 
         line-height: 1.1 !important; 
-        margin: 1.5rem 0 !important; 
+        margin: 1.5rem 0 0.75rem 0 !important; 
         padding: 0 var(--spacing-sm) !important; 
         text-wrap: balance; 
+        text-align: center !important;
     }
     .page-hero .page-subtitle { 
         font-size: 1rem !important; 
         padding: 0 var(--spacing-md) !important; 
-        text-align: left !important;
-        max-width: 700px !important;
+        text-align: center !important;
+        max-width: 600px !important;
         margin: 0 auto 0.75rem auto !important;
     }
     .page-hero .hero-description { 
-        max-width: 700px !important; 
+        max-width: 600px !important; 
         margin: 0 auto !important; 
         padding: 0 var(--spacing-md) !important; 
     }
     .page-hero .hero-description p { 
         font-size: 1rem !important; 
         line-height: 1.6 !important; 
-        text-align: left !important; 
+        text-align: center !important; 
         margin: 0 !important; 
-        hyphens: auto;
     }
     .hero-content-centered .hero-stats {
         flex-direction: column !important;
