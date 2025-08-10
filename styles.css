@@ -499,6 +499,29 @@ body.nav-open {
 
 /* РЕСПОНСИВ ДЛЯ МОБИЛЬНЫХ */
 @media (max-width: 768px) {
+    /* Calculator page hero: avoid clipping big heading, improve readability */
+    .page-hero { 
+        overflow: visible; 
+        padding-bottom: var(--spacing-xl); 
+    }
+    .page-hero h1 { 
+        font-size: 2.4rem !important; 
+        line-height: 1.1 !important; 
+        margin: 1.5rem 0 !important; 
+        padding: 0 var(--spacing-sm) !important; 
+        text-wrap: balance; 
+    }
+    .page-hero .page-subtitle { 
+        font-size: 1rem !important; 
+        padding: 0 var(--spacing-md) !important; 
+    }
+    .page-hero .hero-description p { 
+        font-size: 1rem !important; 
+        line-height: 1.6 !important; 
+        text-align: center !important; 
+        margin: 0 auto !important; 
+        padding: 0 var(--spacing-md) !important; 
+    }
     .hero-content-centered .hero-stats {
         flex-direction: column !important;
         gap: 1.5rem !important;
