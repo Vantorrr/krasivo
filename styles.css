@@ -1030,6 +1030,7 @@ body.nav-open {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: var(--spacing-xl);
+    align-items: stretch; /* ensure equal card heights per row */
 }
 
 .team-member {
@@ -1043,6 +1044,7 @@ body.nav-open {
     transition: var(--transition-smooth);
     opacity: 0;
     transform: scale(0.9);
+    height: 100%; /* fill grid cell height */
 }
 
 .team-member:hover {
