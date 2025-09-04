@@ -707,8 +707,17 @@ body.nav-open {
 }
 
 /* Normalize hero paragraph width/align on all pages */
-.page-hero .hero-description { max-width: 720px; margin-left: auto; margin-right: auto; padding: 0 var(--spacing-md); text-align: left; }
-.page-hero .hero-description p { margin: 0; }
+.page-hero .hero-description { 
+    max-width: 600px; 
+    margin: var(--spacing-lg) auto 0; 
+    padding: 0 var(--spacing-md); 
+    text-align: center; 
+}
+.page-hero .hero-description p { 
+    margin: 0; 
+    line-height: 1.6;
+    word-spacing: normal;
+}
 
 .page-hero::before {
     content: '';
