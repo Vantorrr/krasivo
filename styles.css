@@ -707,8 +707,8 @@ body.nav-open {
 }
 
 /* Normalize hero paragraph width/align on all pages */
-.page-hero .hero-description { max-width: 720px; margin-left: auto; margin-right: auto; text-align: center; }
-.page-hero .hero-description p { margin: 0 auto; }
+.page-hero .hero-description { max-width: 720px; margin-left: auto; margin-right: auto; padding: 0 var(--spacing-md); text-align: left; }
+.page-hero .hero-description p { margin: 0; }
 
 .page-hero::before {
     content: '';
